@@ -154,3 +154,4 @@ public class Main {
                 "Годовой доход вырос на " + kristinaAnnualDifference + " рублей");
     }
 }
+
