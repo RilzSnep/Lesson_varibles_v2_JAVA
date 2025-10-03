@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class hwArrays2 {
     public static void main(String[] args){
         // 1
@@ -39,14 +41,20 @@ public class hwArrays2 {
         // 4
         System.out.println("---------4---------");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0 ; i--) {
-            if (i == 0){
-                System.out.println(reverseFullName[i]);
-                break;
-            }
-            System.out.print(reverseFullName[i]);
+        int lenthOfList = reverseFullName.length - 1;
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            char firstChar = reverseFullName[i];
+            char secondChar = reverseFullName[lenthOfList];
+            reverseFullName[i] = secondChar;
+            reverseFullName[lenthOfList] = firstChar;
+            lenthOfList -= 1;
 
         }
-
+        for (int i = 0; i < reverseFullName.length; i++) {
+            System.out.print(reverseFullName[i]);
+        }
+        System.out.println();
     }
+
 }
+
